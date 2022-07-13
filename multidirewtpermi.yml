@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: creating multiple directories
+      file:
+        path: /opt/new/{{item}}
+        state: directory
+        owner: root
+        group: root
+        mode: u=rwx,g=rwx,o=x
+      with_items:
+      - hiii
+      - hello
+

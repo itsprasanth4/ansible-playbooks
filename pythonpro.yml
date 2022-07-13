@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks: 
+  - name: create file with contents 
+    copy: 
+      dest: /opt/sum-2-numbers2.py
+      owner: root
+      group: hello 
+      mode: 0777  
+      content: 
+         num1 = 15;
+         num2 = 20;
+         sum = num1 + num2;
+         print("Sum of {0} and {1} is {2}" .format(num1, num2, sum))
